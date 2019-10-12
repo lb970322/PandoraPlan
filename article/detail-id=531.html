@@ -1,0 +1,246 @@
+<html><!DOCTYPE html>
+<html ng-app="demo">
+    <head>
+        <meta charset="UTF-8">
+        <title>Baer Chain, a game ecosystem based on blockchain technology architecture, uses distributed smart contracts. </title>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="keywords" content="baerchain,è´å°”é“¾,åŒºå—é“¾æ¸¸æˆ,æ¸¸æˆå…¬é“¾">
+        <meta name="description" content="Baer Chain, a game ecosystem based on blockchain technology architecture, uses distributed smart contracts.è´å°”é“¾ï¼ˆBaer Chainï¼‰æ˜¯å…¨çƒé¦–æ¬¾ä»¥æŠ€æœ¯é©±åŠ¨çš„åŒºå—é“¾æ¸¸æˆäº§ä¸šç”Ÿæ€å¹³å°,æ—¨åœ¨æ„å»ºä¸€ä¸ªåŒºå—é“¾å…±äº«å¹³å°æ¥è§£å†³å…¨çƒæ¸¸æˆç”Ÿæ€ä¿¡æ¯ä¸­å¿ƒåŒ–çš„å­¤å²›é—®é¢˜ï¼ŒæŠŠæ‰€æœ‰äººçš„è¡Œä¸ºã€ä¿¡ç”¨è½¬å˜ä¸ºæ•°å­—åŒ–èµ„äº§ï¼Œä»è€Œäº§ç”Ÿå•†ä¸šä»·å€¼">
+        <link rel="shortcut icon" href="../statics/images/logo.png" tppabs="http://www.baerchain.com/statics/images/logo.png">
+        <!-- Using only with Flat-UI (free)-->
+        <link rel="stylesheet" href="../statics/index/developer/common-files/css/icon-font.css-version=1.1.10" tppabs="http://www.baerchain.com/statics/index/developer/common-files/css/icon-font.css?version=1.1.10">
+        <!-- end -->
+        <link rel="stylesheet" href="../statics/style/hk.css-version=1.1.10" tppabs="http://www.baerchain.com/statics/style/hk.css?version=1.1.10" type="text/css">
+                <link rel="stylesheet" href="../statics/layui/css/layui.css" tppabs="http://www.baerchain.com/statics/layui/css/layui.css">
+        <script src="../statics/layui/layui.js" tppabs="http://www.baerchain.com/statics/layui/layui.js"></script>
+        <link rel="stylesheet" href="../statics/css/swiper.min.css-version=1.1.10" tppabs="http://www.baerchain.com/statics/css/swiper.min.css?version=1.1.10">
+        <link rel="stylesheet" href="../statics/css/indexV2.css-version=1.1.10" tppabs="http://www.baerchain.com/statics/css/indexV2.css?version=1.1.10">
+        <script src="../statics/js/jquery-1.8.3.min.js" tppabs="http://www.baerchain.com/statics/js/jquery-1.8.3.min.js"></script>
+         <script>
+             function chargeBrowser(args) {
+                 var info = window.navigator.userAgent;
+                 if (info.indexOf("MSIE") != -1 && info.indexOf("compatible") != -1) { //åˆ¤æ–­IE
+                     var re_ie=/MSIE.*? (\d+)/;
+                     result=info.match(re_ie);
+                     var version=result[1];
+                     if(version<10){
+                         alert('è¯·ç”¨é«˜ç‰ˆæœ¬æµè§ˆå™¨æ‰“å¼€ï¼Œæ¨èä½¿ç”¨è°·æ­Œæµè§ˆå™¨ï¼Œ360æµè§ˆå™¨');
+                         // window.location.href='http://se.360.cn/';
+                     }else {
+                         if(!args){
+                             alert('ä¸ºäº†ä½¿æ‚¨çš„ä½“éªŒæ›´åŠ èˆ’é€‚ï¼Œæ¨èä½¿ç”¨è°·æ­Œæµè§ˆå™¨ï¼Œ360æµè§ˆå™¨ï¼ŒQQæµè§ˆå™¨,ç«ç‹æµè§ˆå™¨ç­‰');
+                         }
+
+                     }
+                 }else if(info.indexOf('AppleWebKit') ==-1 && info.indexOf("Firefox") ==-1){
+                     if(!args){
+                         alert('ä¸ºäº†ä½¿æ‚¨çš„ä½“éªŒæ›´åŠ èˆ’é€‚ï¼Œæ¨èä½¿ç”¨è°·æ­Œæµè§ˆå™¨ï¼Œ360æµè§ˆå™¨ï¼ŒQQæµè§ˆå™¨,ç«ç‹æµè§ˆå™¨ç­‰');
+                     }
+                 }
+             }
+             chargeBrowser();
+         </script>
+    </head>
+    <body class="skin-blue">
+                <header>
+            <ul>
+                <li>
+                    <a href="../index.htm" tppabs="http://www.baerchain.com/"><img src="../statics/images/newPage/logo.png" tppabs="http://www.baerchain.com/statics/images/newPage/logo.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="../site/indexv2.htm#about" tppabs="http://www.baerchain.com/site/indexv2#about">About</a>
+                    <a href="../site/tech.htm" tppabs="http://www.baerchain.com/site/tech">Technology</a>
+                                            <a href="../statics/BaerChainWhitePaperv1_2_en.pdf" tppabs="http://www.baerchain.com/statics/BaerChainWhitePaperv1_2_en.pdf">White Paper </a>
+                                        <a href="../site/teamv2.htm" tppabs="http://www.baerchain.com/site/teamv2">Team</a>
+                    <a href="../site/news.htm" tppabs="http://www.baerchain.com/site/news">News</a>
+                    <a href="../site/wallet.htm" tppabs="http://www.baerchain.com/site/wallet">Wallet</a>
+                </li>
+                <li class="language">
+                    <i></i>
+                    <form class="layui-form" action="http://www.baerchain.com/site/language" id='language_form'>
+                        <div class="layui-form" style="width:150px;">
+                            <div class="layui-inline">
+                                <select name="language" id="languageFilter" lay-filter="language">
+                                                                        <option value="en" selected>English</option>
+                                    <option value="ko">í•œêµ­ì–´</option>
+                                    <option value="zh" >ä¸­æ–‡</option>
+                                                                    </select>
+                            </div>
+                        </div>
+                    </form>
+                    <script>
+                        layui.use('form', function(){
+                            var form = layui.form();
+                            form.on('select(language)', function(data){
+                                //console.log(data.elem); //å¾—åˆ°selectåŸå§‹DOMå¯¹è±¡
+                                console.log(data.value); //å¾—åˆ°è¢«é€‰ä¸­çš„å€¼
+                                //console.log(data.othis); //å¾—åˆ°ç¾åŒ–åçš„DOMå¯¹è±¡
+                                $('#language_form').submit();
+                            });
+                        }); 
+                    </script> 
+                </li>
+            </ul>
+        </header>
+        
+
+        
+        <!-- å†…å®¹åŒºåŸŸ -->
+        <div class="main_content">
+            <style>
+
+    header a,
+    footer a,
+    .news_next a{
+        text-decoration: none;
+    }
+    header li,
+    footer li{
+        list-style: none;
+    }
+    .news_detail{
+        width: 1200px;
+        margin: 70px auto;
+    }
+    .news_detail h2{
+        font-size: 32px;
+        color: #333;
+    }
+    .news_detail .news_detail_time{
+        padding: 30px 0;
+        border-bottom: 1px solid #f2f2f2;
+        color: #ccc;
+        font-size: 14px;
+        margin-bottom: 55px;
+    }
+    .news_detail article{
+        margin: 56px 0;
+    }
+    .news_next{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: black;
+    }
+    .news_next a{
+        color: #c2c2c2;
+    }
+    .news_next a:hover{
+        color: black;
+    }
+</style>
+<div class="news_detail">
+    <h2>Dynamicä¸¨BRC will soon be listed on ZT.com</h2>
+    <p class="news_detail_time">2019-07-08</p>
+    <article style="width: 844px;margin: 0 auto;">
+        <p>According to the official news on ZT.COM, ZT.COM will start the BRC recharge service at 14:00 (GMT+8) on July 8th, 2019, and open the BRC/USDT transaction pair at 14:00 (GMT+8) on July 10th. Also, the withdraw service will be opened at 14:00 (GMT+8) on July 12th. It is reported that ZT.COM digital asset trading platform is the most convenient platform for buying cryptocurrencies. It adopts advanced distributed cluster architecture and micro-service development method. It has strong scalability and can support up to millions of online usersâ€™ transactions at the same time.&nbsp;</p><p><br/></p>    </article>
+    <div class="news_next">
+                <span> <a href="detail-id=520.htm" tppabs="http://www.baerchain.com/article/detail?id=520">Baer Chain â€œæ›²ç‡èˆªè¡Œâ€ç™»é™†å‰‘æ¡¥</a></span>
+                    <span> <a href="detail-id=536.htm" tppabs="http://www.baerchain.com/article/detail?id=536">Baer Chainæ­£å¼å¯åŠ¨å…¨çƒæ¸¸æˆå¼€å‘è€…æ‹›å‹Ÿ</a></span>
+            <!-- <a href="/site/news">SCHEDULE>></a> -->
+    </div>
+</div>        </div>
+
+
+
+    <!--åº•éƒ¨-->
+    <footer>
+        <ul>
+            <li>
+                <dl>
+                    <dt>Contact us <i></i></dt>
+                    <div class="Contact_us">
+                        <a href="javascript:if(confirm('https://weibo.com/6667329799/profile?rightmod=1&wvr=6&mod=personinfo  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ´ËÒ»µØÖ·Ê¹ÓÃÉĞÎ´Ö§³ÖµÄĞ­Òé (ÀıÈç£¬gopher)¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='https://weibo.com/6667329799/profile?rightmod=1&wvr=6&mod=personinfo'" tppabs="https://weibo.com/6667329799/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank"><img src="../statics/images/newPage/pc_03.png" tppabs="http://www.baerchain.com/statics/images/newPage/pc_03.png" alt=""></a>
+                        <a href="javascript:if(confirm('https://twitter.com/BaerChain?s=05  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ´ËÒ»µØÖ·Ê¹ÓÃÉĞÎ´Ö§³ÖµÄĞ­Òé (ÀıÈç£¬gopher)¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='https://twitter.com/BaerChain?s=05'" tppabs="https://twitter.com/BaerChain?s=05" target="_blank"><img src="../statics/images/newPage/pc_05.png" tppabs="http://www.baerchain.com/statics/images/newPage/pc_05.png" alt=""></a>
+                        <a href="javascript:if(confirm('https://www.facebook.com/baer.chain  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ´ËÒ»µØÖ·Ê¹ÓÃÉĞÎ´Ö§³ÖµÄĞ­Òé (ÀıÈç£¬gopher)¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='https://www.facebook.com/baer.chain'" tppabs="https://www.facebook.com/baer.chain" target="_blank"><img src="../statics/images/newPage/pc_07.png" tppabs="http://www.baerchain.com/statics/images/newPage/pc_07.png" alt=""></a>
+                        <a href="javascript:if(confirm('https://0.plus/  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ´ËÒ»µØÖ·Ê¹ÓÃÉĞÎ´Ö§³ÖµÄĞ­Òé (ÀıÈç£¬gopher)¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='https://0.plus/#/BaerChainCN'" tppabs="https://0.plus/#/BaerChainCN" target="_blank"><img src="../statics/images/newPage/pc_12.png" tppabs="http://www.baerchain.com/statics/images/newPage/pc_12.png" alt=""></a>
+                        <a href="../cdn-cgi/l/email-protection.htm#e684878394858e878f88a684878394858e878f88c8888392" tppabs="http://www.baerchain.com/cdn-cgi/l/email-protection#e684878394858e878f88a684878394858e878f88c8888392" target="_blank"><img src="../statics/images/newPage/pc_13.png" tppabs="http://www.baerchain.com/statics/images/newPage/pc_13.png" alt=""></a>
+                        <a href="javascript:if(confirm('https://github.com/BaerChain  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ´ËÒ»µØÖ·Ê¹ÓÃÉĞÎ´Ö§³ÖµÄĞ­Òé (ÀıÈç£¬gopher)¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='https://github.com/BaerChain'" tppabs="https://github.com/BaerChain" target="_blank"><img src="../statics/images/github.png" tppabs="http://www.baerchain.com/statics/images/github.png" alt=""></a>
+                    </div>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>Baer Chain<i></i></dt>
+                    <dd>Baer Chain, a game ecosystem based on blockchain technology architecture, uses distributed smart contracts.</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>Resources <i></i></dt>
+                    
+                        <dd><a style='color: #fff' href="../statics/BaerChainWhitePaperv1_2_en.pdf" tppabs="http://www.baerchain.com/statics/BaerChainWhitePaperv1_2_en.pdf">Baer Chain White Paper V1.2 </a> </dd>
+                                    </dl>
+            </li>
+        </ul>
+        <img src="../statics/images/newPage/newPage16.png" tppabs="http://www.baerchain.com/statics/images/newPage/newPage16.png" alt="" class="backTop">
+    </footer>
+
+<!--    <audio id="bg_m" src="/statics/bg3.mp3" autoplay="auto" loop="loop">-->
+<!--    -->
+<!--</audio>-->
+<!--<img src="/statics/images/bg_m_play.png" id="music_btn">-->
+<style type="text/css">
+    #music_btn{
+        position: fixed;
+        bottom: 100px;
+        right: 80px;
+        width: 36px;
+        height: 36px;
+        /*border: 1px solid #ccc;*/
+        z-index: 99;
+    }
+    .footer_top h4 a{
+        margin-right: 15px;
+    }
+</style>
+    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" tppabs="http://www.baerchain.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../statics/js/swiper.min.js" tppabs="http://www.baerchain.com/statics/js/swiper.min.js"></script>
+<script type="text/javascript">
+    var play_status = 1;
+    $('#music_btn').click(function(){
+        if (play_status == 1) {
+            play_status = 2;
+            //
+            document.getElementById("bg_m").pause();
+            $('#music_btn').attr('src','/statics/images/bg_m_stop.png');
+        } else{
+
+            play_status = 1;
+            //
+            document.getElementById("bg_m").play();
+            $('#music_btn').attr('src','/statics/images/bg_m_play.png');
+        }
+    });
+    //è½®æ’­
+    var mySwiper = new Swiper('.index_banner', {
+        autoplay:true,
+        loop : true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    //é¼ æ ‡ç§»å…¥è½®æ’­åœæ­¢æ’­æ”¾ ç§»å‡ºå¼€å§‹æ’­æ”¾
+    $('.index_banner').mouseenter(function () {
+        mySwiper.autoplay.stop();
+    }).mouseleave(function () {
+        mySwiper.autoplay.start();
+    })
+
+    //è¿”å›é¡¶éƒ¨
+    $(".backTop").click(function(){
+        $('html , body').animate({scrollTop: 0},'slow');
+    })
+</script>
+<div style="display: none">
+    <script src="../../s22.cnzz.com/z_stat.php-id=1273653612&web_id=1273653612" tppabs="https://s22.cnzz.com/z_stat.php?id=1273653612&web_id=1273653612" language="JavaScript"></script>
+</div>
+<script src="../statics/js/main.js" tppabs="http://www.baerchain.com/statics/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<html><!DOCTYPE html>
+<html ng-app="demo">
+    <head>
+        <meta charset="UTF-8">
+        <title>Baer Chain, a game ecosystem based on blockchain technology architecture, uses distributed smart contracts. </title>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="keywords" content="baerchain,贝尔链,区块链游戏,游戏公链">
+        <meta name="description" content="Baer Chain, a game ecosystem based on blockchain technology architecture, uses distributed smart contracts.贝尔链（Baer Chain）是全球首款以技术驱动的区块链游戏产业生态平台,旨在构建一个区块链共享平台来解决全球游戏生态信息中心化的孤岛问题，把所有人的行为、信用转变为数字化资产，从而产生商业价值">
+        <link rel="shortcut icon" href="../statics/images/logo.png" tppabs="http://www.baerchain.com/statics/images/logo.png">
+        <!-- Using only with Flat-UI (free)-->
+        <link rel="stylesheet" href="../statics/index/developer/common-files/css/icon-font.css-version=1.1.10" tppabs="http://www.baerchain.com/statics/index/developer/common-files/css/icon-font.css?version=1.1.10">
+        <!-- end -->
+        <link rel="stylesheet" href="../statics/style/hk.css-version=1.1.10" tppabs="http://www.baerchain.com/statics/style/hk.css?version=1.1.10" type="text/css">
+                <link rel="stylesheet" href="../statics/layui/css/layui.css" tppabs="http://www.baerchain.com/statics/layui/css/layui.css">
+        <script src="../statics/layui/layui.js" tppabs="http://www.baerchain.com/statics/layui/layui.js"></script>
+        <link rel="stylesheet" href="../statics/css/swiper.min.css-version=1.1.10" tppabs="http://www.baerchain.com/statics/css/swiper.min.css?version=1.1.10">
+        <link rel="stylesheet" href="../statics/css/indexV2.css-version=1.1.10" tppabs="http://www.baerchain.com/statics/css/indexV2.css?version=1.1.10">
+        <script src="../statics/js/jquery-1.8.3.min.js" tppabs="http://www.baerchain.com/statics/js/jquery-1.8.3.min.js"></script>
+         <script>
+             function chargeBrowser(args) {
+                 var info = window.navigator.userAgent;
+                 if (info.indexOf("MSIE") != -1 && info.indexOf("compatible") != -1) { //判断IE
+                     var re_ie=/MSIE.*? (\d+)/;
+                     result=info.match(re_ie);
+                     var version=result[1];
+                     if(version<10){
+                         alert('请用高版本浏览器打开，推荐使用谷歌浏览器，360浏览器');
+                         // window.location.href='http://se.360.cn/';
+                     }else {
+                         if(!args){
+                             alert('为了使您的体验更加舒适，推荐使用谷歌浏览器，360浏览器，QQ浏览器,火狐浏览器等');
+                         }
+
+                     }
+                 }else if(info.indexOf('AppleWebKit') ==-1 && info.indexOf("Firefox") ==-1){
+                     if(!args){
+                         alert('为了使您的体验更加舒适，推荐使用谷歌浏览器，360浏览器，QQ浏览器,火狐浏览器等');
+                     }
+                 }
+             }
+             chargeBrowser();
+         </script>
+    </head>
+    <body class="skin-blue">
+                <header>
+            <ul>
+                <li>
+                    <a href="../index.htm" tppabs="http://www.baerchain.com/"><img src="../statics/images/newPage/logo.png" tppabs="http://www.baerchain.com/statics/images/newPage/logo.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="../site/indexv2.htm#about" tppabs="http://www.baerchain.com/site/indexv2#about">About</a>
+                    <a href="../site/tech.htm" tppabs="http://www.baerchain.com/site/tech">Technology</a>
+                                            <a href="../statics/BaerChainWhitePaperv1_2_en.pdf" tppabs="http://www.baerchain.com/statics/BaerChainWhitePaperv1_2_en.pdf">White Paper </a>
+                                        <a href="../site/teamv2.htm" tppabs="http://www.baerchain.com/site/teamv2">Team</a>
+                    <a href="../site/news.htm" tppabs="http://www.baerchain.com/site/news">News</a>
+                    <a href="../site/wallet.htm" tppabs="http://www.baerchain.com/site/wallet">Wallet</a>
+                </li>
+                <li class="language">
+                    <i></i>
+                    <form class="layui-form" action="http://www.baerchain.com/site/language" id='language_form'>
+                        <div class="layui-form" style="width:150px;">
+                            <div class="layui-inline">
+                                <select name="language" id="languageFilter" lay-filter="language">
+                                                                        <option value="en" selected>English</option>
+                                    <option value="ko">한국어</option>
+                                    <option value="zh" >中文</option>
+                                                                    </select>
+                            </div>
+                        </div>
+                    </form>
+                    <script>
+                        layui.use('form', function(){
+                            var form = layui.form();
+                            form.on('select(language)', function(data){
+                                //console.log(data.elem); //得到select原始DOM对象
+                                console.log(data.value); //得到被选中的值
+                                //console.log(data.othis); //得到美化后的DOM对象
+                                $('#language_form').submit();
+                            });
+                        }); 
+                    </script> 
+                </li>
+            </ul>
+        </header>
+        
+
+        
+        <!-- 内容区域 -->
+        <div class="main_content">
+            <style>
+
+    header a,
+    footer a,
+    .news_next a{
+        text-decoration: none;
+    }
+    header li,
+    footer li{
+        list-style: none;
+    }
+    .news_detail{
+        width: 1200px;
+        margin: 70px auto;
+    }
+    .news_detail h2{
+        font-size: 32px;
+        color: #333;
+    }
+    .news_detail .news_detail_time{
+        padding: 30px 0;
+        border-bottom: 1px solid #f2f2f2;
+        color: #ccc;
+        font-size: 14px;
+        margin-bottom: 55px;
+    }
+    .news_detail article{
+        margin: 56px 0;
+    }
+    .news_next{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: black;
+    }
+    .news_next a{
+        color: #c2c2c2;
+    }
+    .news_next a:hover{
+        color: black;
+    }
+</style>
+<div class="news_detail">
+    <h2>Baer Chain正式启动全球游戏开发者招募</h2>
+    <p class="news_detail_time">2019-07-15</p>
+    <article style="width: 844px;margin: 0 auto;">
+        <p style="margin-top: 32px; margin-bottom: 32px; font-variant-numeric: normal; font-variant-east-asian: normal; white-space: normal; padding: 0px; font-size: 18px; line-height: 36px; overflow-wrap: break-word; word-break: normal; color: rgb(41, 41, 59); text-align: justify; font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, &quot;\\微软雅黑&quot;, STHeitiSC-Light, simsun, &quot;\\宋体&quot;, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; widows: 1; background-color: rgb(255, 255, 255);"><strong style="font-size: unset; line-height: 30px; margin-bottom: 30px;">2019年7月15日，Baer Chain全面启动全球游戏开发者招募，正式面向全球招募最优秀的独立游戏开发团队</strong>。成功入选的团队将能与Baer Chain达成长期战略合作，团队的优秀作品也将有机会登陆Baer Chain 通证管理系统的游戏推荐板块。</p><p style="margin-top: 32px; margin-bottom: 32px; font-variant-numeric: normal; font-variant-east-asian: normal; white-space: normal; padding: 0px; font-size: 18px; line-height: 36px; overflow-wrap: break-word; word-break: normal; color: rgb(41, 41, 59); text-align: center; font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, &quot;\\微软雅黑&quot;, STHeitiSC-Light, simsun, &quot;\\宋体&quot;, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; widows: 1; background-color: rgb(255, 255, 255);"><img alt="" src="../statics/upload/image/20190715/1563183988522864.png" tppabs="http://www.baerchain.com/statics/upload/image/20190715/1563183988522864.png" width="1200" height="867" style="border: 1px solid rgb(238, 238, 238); vertical-align: top; max-width: 770px; margin: 0px auto; display: block;"/></p><p style="margin-top: 32px; margin-bottom: 32px; font-variant-numeric: normal; font-variant-east-asian: normal; white-space: normal; padding: 0px; font-size: 18px; line-height: 36px; overflow-wrap: break-word; word-break: normal; color: rgb(41, 41, 59); text-align: justify; font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, &quot;\\微软雅黑&quot;, STHeitiSC-Light, simsun, &quot;\\宋体&quot;, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; widows: 1; background-color: rgb(255, 255, 255);"><strong style="font-size: unset; line-height: 30px; margin-bottom: 30px;">作为全球游戏第一公链，Baer Chain一直致力于扩展游戏生态，创建全球游戏开发者生态联盟，为全球区块链游戏行业发展营造更良好的环境</strong>。</p><p style="margin-top: 32px; margin-bottom: 32px; font-variant-numeric: normal; font-variant-east-asian: normal; white-space: normal; padding: 0px; font-size: 18px; line-height: 36px; overflow-wrap: break-word; word-break: normal; color: rgb(41, 41, 59); text-align: justify; font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, &quot;\\微软雅黑&quot;, STHeitiSC-Light, simsun, &quot;\\宋体&quot;, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; widows: 1; background-color: rgb(255, 255, 255);">今年4月，Baer Chain面向全球启动的MEP（百万生态计划）受到行业内外的广泛关注，Baer Chain社群成员规模也在原有繁荣的基础上再次呈现爆发式增长。</p><p style="margin-top: 32px; margin-bottom: 32px; font-variant-numeric: normal; font-variant-east-asian: normal; white-space: normal; padding: 0px; font-size: 18px; line-height: 36px; overflow-wrap: break-word; word-break: normal; color: rgb(41, 41, 59); text-align: justify; font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, &quot;\\微软雅黑&quot;, STHeitiSC-Light, simsun, &quot;\\宋体&quot;, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; widows: 1; background-color: rgb(255, 255, 255);">目前，Baer Chain通证管理系统已经有57万的真实用户流量作为支撑，分布在亚洲、欧洲、北美等全球各区域的百万社区生态也在积极为Baer Chain的游戏生态建设做全力推广工作，再加上国际顶尖区块链游戏技术团队的加持，将为Baer Chain面向全球的游戏生态扩张创造巨大机会。</p><p style="margin-top: 32px; margin-bottom: 32px; font-variant-numeric: normal; font-variant-east-asian: normal; white-space: normal; padding: 0px; font-size: 18px; line-height: 36px; overflow-wrap: break-word; word-break: normal; color: rgb(41, 41, 59); text-align: justify; font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, &quot;\\微软雅黑&quot;, STHeitiSC-Light, simsun, &quot;\\宋体&quot;, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; widows: 1; background-color: rgb(255, 255, 255);"><strong style="font-size: unset; line-height: 30px; margin-bottom: 30px;">Baer Chain此次启动的全球游戏开发者招募活动，也将是为打造全球区块链游戏生态系统踏出的坚实一步。</strong></p><p style="margin-top: 32px; margin-bottom: 32px; font-variant-numeric: normal; font-variant-east-asian: normal; white-space: normal; padding: 0px; font-size: 18px; line-height: 36px; overflow-wrap: break-word; word-break: normal; color: rgb(41, 41, 59); text-align: center; font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, &quot;\\微软雅黑&quot;, STHeitiSC-Light, simsun, &quot;\\宋体&quot;, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; widows: 1; background-color: rgb(255, 255, 255);"><img alt="" src="../statics/upload/image/20190715/1563183990901347.png" tppabs="http://www.baerchain.com/statics/upload/image/20190715/1563183990901347.png" width="785" height="387" style="border: 1px solid rgb(238, 238, 238); vertical-align: top; max-width: 770px; margin: 0px auto; display: block;"/></p><p style="margin-top: 32px; margin-bottom: 32px; font-variant-numeric: normal; font-variant-east-asian: normal; white-space: normal; padding: 0px; font-size: 18px; line-height: 36px; overflow-wrap: break-word; word-break: normal; color: rgb(41, 41, 59); text-align: justify; font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, &quot;\\微软雅黑&quot;, STHeitiSC-Light, simsun, &quot;\\宋体&quot;, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; widows: 1; background-color: rgb(255, 255, 255);">此前与Baer Chain签署长期战略合作协议的北美独立游戏开发团队Cali，其所开发的第一款游戏——BRC Star，已正式登陆Baer Chain游戏生态平台。Baer Chain将诚邀全球更多专业的游戏技术开发团队加入，深度参与到Baer Chain百万生态系统的建设中，为共建更为多元化的游戏生态平台贡献力量。</p><p style="margin-top: 32px; margin-bottom: 32px; font-variant-numeric: normal; font-variant-east-asian: normal; white-space: normal; padding: 0px; font-size: 18px; line-height: 36px; overflow-wrap: break-word; word-break: normal; color: rgb(41, 41, 59); text-align: justify; font-family: &quot;PingFang SC&quot;, &quot;Lantinghei SC&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Microsoft YaHei&quot;, &quot;\\微软雅黑&quot;, STHeitiSC-Light, simsun, &quot;\\宋体&quot;, &quot;WenQuanYi Zen Hei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; widows: 1; background-color: rgb(255, 255, 255);"><strong style="font-size: unset; line-height: 30px; margin-bottom: 30px;">伴随着Baer Chain主网上线时间节点的日渐临近，Baer Chain即将与全球最顶尖的游戏开发团队一起，带领行业迈入区块链游戏的价值新纪元。</strong></p>    </article>
+    <div class="news_next">
+                <span> <a href="detail-id=531.htm" tppabs="http://www.baerchain.com/article/detail?id=531">Dynamic丨BRC will soon be listed on ZT.com</a></span>
+                    <span> <a href="javascript:if(confirm('http://www.baerchain.com/article/detail?id=537  \n\n�ļ���δ�� Teleport Pro ȡ�أ���Ϊ ��һ�ļ��������˳�ʼ��ַ̫Զ�ˡ���������ӿ�ʼ��ַ����ȡ�ص���ȣ���Ϳ���ȡ�ص���һ�ļ���  \n\n��Ҫ�ӷ������ϴ�����'))window.location='http://www.baerchain.com/article/detail?id=537'" tppabs="http://www.baerchain.com/article/detail?id=537">Baer Germany发布新版Baer Chain区块浏览器</a></span>
+            <!-- <a href="/site/news">SCHEDULE>></a> -->
+    </div>
+</div>        </div>
+
+
+
+    <!--底部-->
+    <footer>
+        <ul>
+            <li>
+                <dl>
+                    <dt>Contact us <i></i></dt>
+                    <div class="Contact_us">
+                        <a href="javascript:if(confirm('https://weibo.com/6667329799/profile?rightmod=1&wvr=6&mod=personinfo  \n\n�ļ���δ�� Teleport Pro ȡ�أ���Ϊ ��һ��ַʹ����δ֧�ֵ�Э�� (���磬gopher)��  \n\n��Ҫ�ӷ������ϴ�����'))window.location='https://weibo.com/6667329799/profile?rightmod=1&wvr=6&mod=personinfo'" tppabs="https://weibo.com/6667329799/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank"><img src="../statics/images/newPage/pc_03.png" tppabs="http://www.baerchain.com/statics/images/newPage/pc_03.png" alt=""></a>
+                        <a href="javascript:if(confirm('https://twitter.com/BaerChain?s=05  \n\n�ļ���δ�� Teleport Pro ȡ�أ���Ϊ ��һ��ַʹ����δ֧�ֵ�Э�� (���磬gopher)��  \n\n��Ҫ�ӷ������ϴ�����'))window.location='https://twitter.com/BaerChain?s=05'" tppabs="https://twitter.com/BaerChain?s=05" target="_blank"><img src="../statics/images/newPage/pc_05.png" tppabs="http://www.baerchain.com/statics/images/newPage/pc_05.png" alt=""></a>
+                        <a href="javascript:if(confirm('https://www.facebook.com/baer.chain  \n\n�ļ���δ�� Teleport Pro ȡ�أ���Ϊ ��һ��ַʹ����δ֧�ֵ�Э�� (���磬gopher)��  \n\n��Ҫ�ӷ������ϴ�����'))window.location='https://www.facebook.com/baer.chain'" tppabs="https://www.facebook.com/baer.chain" target="_blank"><img src="../statics/images/newPage/pc_07.png" tppabs="http://www.baerchain.com/statics/images/newPage/pc_07.png" alt=""></a>
+                        <a href="javascript:if(confirm('https://0.plus/  \n\n�ļ���δ�� Teleport Pro ȡ�أ���Ϊ ��һ��ַʹ����δ֧�ֵ�Э�� (���磬gopher)��  \n\n��Ҫ�ӷ������ϴ�����'))window.location='https://0.plus/#/BaerChainCN'" tppabs="https://0.plus/#/BaerChainCN" target="_blank"><img src="../statics/images/newPage/pc_12.png" tppabs="http://www.baerchain.com/statics/images/newPage/pc_12.png" alt=""></a>
+                        <a href="../cdn-cgi/l/email-protection.htm#7416151106171c151d1a3416151106171c151d1a5a1a1100" tppabs="http://www.baerchain.com/cdn-cgi/l/email-protection#7416151106171c151d1a3416151106171c151d1a5a1a1100" target="_blank"><img src="../statics/images/newPage/pc_13.png" tppabs="http://www.baerchain.com/statics/images/newPage/pc_13.png" alt=""></a>
+                        <a href="javascript:if(confirm('https://github.com/BaerChain  \n\n�ļ���δ�� Teleport Pro ȡ�أ���Ϊ ��һ��ַʹ����δ֧�ֵ�Э�� (���磬gopher)��  \n\n��Ҫ�ӷ������ϴ�����'))window.location='https://github.com/BaerChain'" tppabs="https://github.com/BaerChain" target="_blank"><img src="../statics/images/github.png" tppabs="http://www.baerchain.com/statics/images/github.png" alt=""></a>
+                    </div>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>Baer Chain<i></i></dt>
+                    <dd>Baer Chain, a game ecosystem based on blockchain technology architecture, uses distributed smart contracts.</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>Resources <i></i></dt>
+                    
+                        <dd><a style='color: #fff' href="../statics/BaerChainWhitePaperv1_2_en.pdf" tppabs="http://www.baerchain.com/statics/BaerChainWhitePaperv1_2_en.pdf">Baer Chain White Paper V1.2 </a> </dd>
+                                    </dl>
+            </li>
+        </ul>
+        <img src="../statics/images/newPage/newPage16.png" tppabs="http://www.baerchain.com/statics/images/newPage/newPage16.png" alt="" class="backTop">
+    </footer>
+
+<!--    <audio id="bg_m" src="/statics/bg3.mp3" autoplay="auto" loop="loop">-->
+<!--    -->
+<!--</audio>-->
+<!--<img src="/statics/images/bg_m_play.png" id="music_btn">-->
+<style type="text/css">
+    #music_btn{
+        position: fixed;
+        bottom: 100px;
+        right: 80px;
+        width: 36px;
+        height: 36px;
+        /*border: 1px solid #ccc;*/
+        z-index: 99;
+    }
+    .footer_top h4 a{
+        margin-right: 15px;
+    }
+</style>
+    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" tppabs="http://www.baerchain.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../statics/js/swiper.min.js" tppabs="http://www.baerchain.com/statics/js/swiper.min.js"></script>
+<script type="text/javascript">
+    var play_status = 1;
+    $('#music_btn').click(function(){
+        if (play_status == 1) {
+            play_status = 2;
+            //
+            document.getElementById("bg_m").pause();
+            $('#music_btn').attr('src','/statics/images/bg_m_stop.png');
+        } else{
+
+            play_status = 1;
+            //
+            document.getElementById("bg_m").play();
+            $('#music_btn').attr('src','/statics/images/bg_m_play.png');
+        }
+    });
+    //轮播
+    var mySwiper = new Swiper('.index_banner', {
+        autoplay:true,
+        loop : true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    //鼠标移入轮播停止播放 移出开始播放
+    $('.index_banner').mouseenter(function () {
+        mySwiper.autoplay.stop();
+    }).mouseleave(function () {
+        mySwiper.autoplay.start();
+    })
+
+    //返回顶部
+    $(".backTop").click(function(){
+        $('html , body').animate({scrollTop: 0},'slow');
+    })
+</script>
+<div style="display: none">
+    <script src="../../s22.cnzz.com/z_stat.php-id=1273653612&web_id=1273653612" tppabs="https://s22.cnzz.com/z_stat.php?id=1273653612&web_id=1273653612" language="JavaScript"></script>
+</div>
+<script src="../statics/js/main.js" tppabs="http://www.baerchain.com/statics/js/main.js"></script>
+</body>
+</html>
