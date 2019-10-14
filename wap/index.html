@@ -24,8 +24,12 @@
     <link rel="stylesheet" href="../statics/css/swiper.min.css">
     <link rel="stylesheet" href="../statics/css/index_wap.css">
     <script src="../statics/js/auto-size.js"></script>
+    <script type="text/javascript" src="../statics/js/three.min.js"></script>
+    <script type="text/javascript" src="../statics/js/dat.gui.min.js"></script>
+    <script type="text/javascript" src="../statics/js/Stats.min.js"></script>
     <script src="../statics/js/jquery-1.8.3.min.js"></script>
     <script src="../statics/js/swiper.min.js"></script>
+    <script src="../statics/js/index.js"></script>
     <!-- ico图标 -->
     <link rel="stylesheet" href="../statics/css/lin-css/iconfont.css">
     <!-- layui -->
@@ -227,15 +231,20 @@
     <!--蒙版-->
     <!-- <div class="mask"></div> -->
     <div class="container" id="page-top">
-        <script src="../statics/js/lottie.min.js"></script>
+        <!-- <script src="../statics/js/lottie.min.js"></script> -->
         <div class="center">
             <!-- top img部分 -->
-            <div class="mobil_center_1" id="bodymovin">
+            <div class="mobil_center_1" id="WebGL-output">
                 <div>
                     <h1 style="font-family:'MEDIUM'; ">PandoraPlan</h1>
-                    <!-- <p style="font-family:'fontHelveticaNeueCE35Roman'">THE PIONEER OF GLOBAL GAME PUBLIC CHAIN</p> -->
                 </div>
             </div>
+            <!-- <div class="mobil_center_1" id="bodymovin">
+                <div>
+                    <h1 style="font-family:'MEDIUM'; ">PandoraPlan</h1>
+                    <p style="font-family:'fontHelveticaNeueCE35Roman'">THE PIONEER OF GLOBAL GAME PUBLIC CHAIN</p>
+                </div>
+            </div> -->
             <!-- 第一个div -->
             <div class="mobil_center_2">
                 <div>
@@ -497,11 +506,16 @@
             
             .mobil_center_1 div {
                 position: absolute;
-                width: 6.55rem;
+                width: 100%;
                 text-align: center;
                 color: white;
                 top: 3.38rem;
                 z-index: 200;
+            }
+            
+            .mobil_center_1 div h1 {
+                font-size: 32px;
+                color: rgb( 80, 198, 226);
             }
             
             .swiper-container {
@@ -695,6 +709,10 @@
             
             .mobil_center_1 {
                 height: 7.09rem;
+            }
+            
+            .mobil_center_1 canvas {
+                height: 350px !important;
             }
         </style>
 
