@@ -703,6 +703,7 @@
         <script>
             //三个轮播系统
             var swiper1 = new Swiper('#swiper1', {
+                autoplay: true,
                 speed: 600,
                 parallax: true,
                 loop: true,
@@ -713,7 +714,7 @@
             });
             var swiper2 = new Swiper('#swiper2', {
                 loop: true,
-                autoplay: false,
+                autoplay: true,
                 pagination: {
                     el: '.swp2',
                 },
@@ -722,20 +723,20 @@
                     prevEl: '.prev2',
                 }
             });
-            var swiper3 = new Swiper('#swiper3', {
-                loop: true,
-                slidesPerView: 3, //显示的数量
-                spaceBetween: 10, //div之间的距离
-                slidesPerGroup: 1,
-                pagination: {
-                    el: '.swp3',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.next3',
-                    prevEl: '.prev3',
-                }
-            });
+            // var swiper3 = new Swiper('#swiper3', {
+            //     loop: true,
+            //     slidesPerView: 3, //显示的数量
+            //     spaceBetween: 10, //div之间的距离
+            //     slidesPerGroup: 1,
+            //     pagination: {
+            //         el: '.swp3',
+            //         clickable: true,
+            //     },
+            //     navigation: {
+            //         nextEl: '.next3',
+            //         prevEl: '.prev3',
+            //     }
+            // });
 
             /*锚点动效*/
             $('a[href*=#],area[href*=#]').click(function() {
